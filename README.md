@@ -1,6 +1,6 @@
 # BUG TRACKER (VERSION 2)
 
-This is second release of the previous version of [bugtracker](https://github.com/bugtracker_v1).
+This is second release of the previous version of [bugtracker](https://github.com/ademolab91/bugtracker_v1.git).
 
 This app helps team work better by enabling every member on a team to submit and correct bugs. This app is geared towards developers, QA testers, project managers and product owners.
 

@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordRequestForm
 from typing import Annotated
+from .. import settings
 from ..tags import Tags
 from .schemas import Token
 from .utils import authenticate_user
@@ -28,4 +29,8 @@ async def login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
     access_token = create_access_token(
         data={"sub": user.email, "scopes": form_data.scopes}
     )
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "expires_in": settings.access_token_expire_minutes,
+    }

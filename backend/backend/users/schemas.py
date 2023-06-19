@@ -38,3 +38,7 @@ class UserUpdate(BaseModel):
 
     name: str = None
     role: str = None
+
+class UserEmail(BaseModel):
+    """ A class that defines the schema for checking a user through their email """
+    email: EmailStr

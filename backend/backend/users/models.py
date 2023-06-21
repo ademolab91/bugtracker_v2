@@ -5,9 +5,9 @@ from datetime import datetime
 class User(BaseModel):
     """A class that defines a user"""
 
-    name: str = None
+    name: str
     hashed_password: str
     email: EmailStr
-    role: str = None
+    role: str
     created_at: datetime = datetime.utcnow()
     updated_at: datetime = datetime.utcnow()

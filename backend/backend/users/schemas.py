@@ -17,10 +17,10 @@ class Roles(str, Enum):
 class UserIn(BaseModel):
     """A class that defines the schema for creating a user"""
 
-    name: str = None
+    name: str
     email: EmailStr
     password: str
-    role: str = Roles.developer.value
+    role: str
 
 
 class UserOut(BaseModel):
@@ -36,8 +36,8 @@ class UserOut(BaseModel):
 class UserUpdate(BaseModel):
     """A class that defines the schema for updating a user"""
 
-    name: str = None
-    role: str = None
+    name: str
+    role: str
 
 class UserEmail(BaseModel):
     """ A class that defines the schema for checking a user through their email """
